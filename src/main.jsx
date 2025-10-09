@@ -9,17 +9,16 @@ import {
 } from "react-router-dom";
 
 import App from "./components/App/App";
-import About from "./components/About/About";
+import Hero from "./components/Hero/Hero";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import WorkWithMe from "./components/WorkWithMe/WorkWithMe";
-import Hero from "./components/Hero/Hero";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Hero />} />
-      <Route path="about" element={<About />} />
+      <Route path="about" element={<Hero />} />
       <Route path="skills" element={<Skills />} />
       <Route path="projects" element={<Projects />} />
       <Route path="contact" element={<WorkWithMe />} />

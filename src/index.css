@@ -37,25 +37,46 @@ body {
   color: var(--text-primary);
 }
 
+/* Global Element Styles */
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+}
+h2 {
+  font-size: 1.875em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+p {
+  color: var(--text-secondary);
+  font-size: 1em;
+  letter-spacing: 0.1em;
+}
+
 .navlink {
   color: var(--text-primary);
+  text-decoration: none;
 }
 
 button {
   border-radius: 20px;
   border: 1px solid transparent;
-  padding: 0.7em 2em;
-  font-size: 0.625em;
+  padding: 1em 0.5em;
+  font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
   transition: border-color 0.25s;
   background: linear-gradient(to right, var(--grad-blue), var(--grad-purple));
   color: var(--text-primary);
+  letter-spacing: 0.1em;
+  width: 200px;
 }
-button:hover {
+/* button:hover {
   background: var(--grad-txt-purple);
-}
+} */
 /* button:focus,
 button:focus-visible {
   outline: 4px auto var(--grad-txt-purple);
@@ -73,3 +94,15 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+@media (min-width: 580px) {
+  h1 {
+    font-size: 4.5em;
+  }
+  p {
+    font-size: 1.3em;
+  }
+  h2 {
+    font-size: 3em;
+  }
+}
