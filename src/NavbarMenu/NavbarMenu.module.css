@@ -1,0 +1,91 @@
+.navMenuContainer {
+  display: flex;
+  margin: 0 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navMenuBtn {
+  border-radius: 20px;
+  width: 2em;
+  background: var(--background-primary);
+  padding: 0.2em 0em;
+  box-shadow: none;
+  border: none;
+}
+#navMenuBtn:hover {
+  background-color: var(--background-primary);
+}
+
+.navbarMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: linear-gradient(
+    to right,
+    var(--background-primary) 0%,
+    var(--background-secondary) 50%,
+    var(--background-primary) 100%
+  );
+  padding: 20px;
+  margin: 2px;
+  border-radius: 10px;
+  opacity: 0.9;
+  line-height: 2.6;
+  z-index: 1;
+  position: absolute;
+  top: 4.5em;
+  right: -0.1em;
+}
+.hidden {
+  display: none;
+}
+.navItem {
+  margin: 0 1em;
+  text-decoration: none;
+  background-image: linear-gradient(
+    to right,
+    var(--grad-txt-purple),
+    var(--grad-txt-magenta)
+  );
+  background-clip: text;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.navItem:hover {
+  opacity: 1;
+  transform: scale(1.2);
+  text-decoration: underline;
+}
+#contactBtn {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #navMenuBtn {
+    display: none;
+  }
+  .navMenuContainer {
+    width: 60%;
+    margin-right: 1.5em;
+  }
+  .navbarMenu {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: var(--background-primary);
+  }
+  .hidden {
+    display: flex;
+  }
+  #contactBtn {
+    display: block;
+  }
+}
