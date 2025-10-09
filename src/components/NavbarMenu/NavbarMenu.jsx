@@ -1,8 +1,8 @@
 import styles from "./NavbarMenu.module.css";
 import { NavLink } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
-import menuIcon from "../assets/menuIconWhite.svg";
-import closeIcon from "../assets/closeIconWhite.svg";
+import menuIcon from "../../assets/menuIconWhite.svg";
+import closeIcon from "../../assets/closeIconWhite.svg";
 
 export default function NavbarMenu() {
   const [isHidden, setIsHidden] = useState(true);

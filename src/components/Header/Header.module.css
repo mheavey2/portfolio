@@ -6,6 +6,7 @@
   border-bottom: 1px solid #6b7280;
   width: 100vw;
   padding: 1em;
+  z-index: 1;
 }
 
 #title {

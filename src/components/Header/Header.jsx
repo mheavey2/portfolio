@@ -1,4 +1,4 @@
-import NavbarMenu from "../../NavbarMenu/NavbarMenu";
+import NavbarMenu from "../NavbarMenu/NavbarMenu";
 import styles from "./Header.module.css";
 import { NavLink } from "react-router-dom";
 
