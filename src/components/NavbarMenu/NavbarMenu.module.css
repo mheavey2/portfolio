@@ -48,7 +48,7 @@
   display: none;
 }
 .navItem {
-  margin: 0 1em;
+  margin: 0 0.5em;
   text-decoration: none;
   background-image: linear-gradient(
     to right,
