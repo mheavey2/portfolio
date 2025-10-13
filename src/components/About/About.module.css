@@ -20,7 +20,9 @@ h2 > span {
   background-clip: text;
 }
 .aboutContainer > p {
-  width: 100vw;
+  width: 80vw;
+  background: transparent;
+  margin: 5em 0em;
 }
 .btnContainer {
   padding: 3em 0em;
