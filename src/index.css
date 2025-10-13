@@ -73,14 +73,15 @@ button {
   color: var(--text-primary);
   letter-spacing: 0.1em;
   width: 200px;
+  transition: transform;
 }
-/* button:hover {
-  background: var(--grad-txt-purple);
-} */
-/* button:focus,
-button:focus-visible {
-  outline: 4px auto var(--grad-txt-purple);
-} */
+button:hover {
+  background: linear-gradient(
+    to right,
+    var(--grad-txt-purple),
+    var(--grad-txt-magenta)
+  );
+}
 
 /* @media (prefers-color-scheme: light) {
   :root {
