@@ -8,12 +8,12 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 
-import App from "./components/App/App";
-import Hero from "./components/Hero/Hero";
-import About from "./components/About/About";
-import Skills from "./components/Skills/Skills";
-import Projects from "./components/Projects/Projects";
-import WorkWithMe from "./components/WorkWithMe/WorkWithMe";
+import App from "./components/App/App.jsx";
+import Hero from "./components/Hero/Hero.jsx";
+import About from "./components/About/About.jsx";
+import Skills from "./components/Skills/Skills.jsx";
+import Projects from "./components/Projects/Projects.jsx";
+import WorkWithMe from "./components/WorkWithMe/WorkWithMe.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
