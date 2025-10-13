@@ -73,6 +73,13 @@
       border-box;
   border: solid 2px transparent;
 }
+#collabBtn:hover {
+  background: linear-gradient(
+    to right,
+    var(--grad-txt-purple),
+    var(--grad-txt-magenta)
+  );
+}
 
 @media (min-width: 580px) {
   .heroContainer {
