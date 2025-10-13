@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import menuIcon from "../../assets/menuIconWhite.svg";
 import closeIcon from "../../assets/closeIconWhite.svg";
+import * as Scroll from "react-scroll";
 
 export default function NavbarMenu() {
   const [isHidden, setIsHidden] = useState(true);
@@ -12,6 +13,50 @@ export default function NavbarMenu() {
   };
 
   const navMenuRef = useRef(null);
+
+  //use react-scroller to scroll to different page sections
+  // const scroll = Scroll.animateScroll();
+  const scroller = Scroll.scroller;
+
+  // scroll to about from within homepage
+  const scrollToAbout = () => {
+    scroller.scrollTo("about", {
+      duration: 200,
+      delay: 0,
+      smooth: true,
+      offset: 0,
+    });
+  };
+
+  // scroll to skills from within homepage
+  const scrollToSkills = () => {
+    scroller.scrollTo("skills", {
+      duration: 200,
+      delay: 0,
+      smooth: true,
+      offset: 0,
+    });
+  };
+
+  // scroll to projects from within homepage
+  const scrollToProjects = () => {
+    scroller.scrollTo("projects", {
+      duration: 200,
+      delay: 0,
+      smooth: true,
+      offset: 0,
+    });
+  };
+
+  // scroll to contact from within homepage
+  const scrollToContact = () => {
+    scroller.scrollTo("workWithMe", {
+      duration: 200,
+      delay: 0,
+      smooth: true,
+      offset: 0,
+    });
+  };
 
   useEffect(() => {
     //method to handle closing menu when you click elsewhere on the page
@@ -54,16 +99,32 @@ export default function NavbarMenu() {
           }`}
           role="menu"
         >
-          <NavLink to="/" className={`navlink ${styles.navItem}`}>
+          <NavLink
+            onClick={scrollToAbout}
+            className={`navlink ${styles.navItem}`}
+            role="menuitem"
+          >
             About
           </NavLink>
-          <NavLink to="skills" className={`navlink ${styles.navItem}`}>
+
+          <NavLink
+            onClick={scrollToSkills}
+            className={`navlink ${styles.navItem}`}
+            role="menuitem"
+          >
             Skills
           </NavLink>
-          <NavLink to="projects" className={`navlink ${styles.navItem}`}>
+          <NavLink
+            onClick={scrollToProjects}
+            className={`navlink ${styles.navItem}`}
+            role="menuitem"
+          >
             Projects
           </NavLink>
-          <NavLink to="contact" className={`navlink ${styles.navItem}`}>
+          <NavLink
+            onClick={scrollToContact}
+            className={`navlink ${styles.navItem}`}
+          >
             Contact
           </NavLink>
         </nav>
