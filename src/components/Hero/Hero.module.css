@@ -45,10 +45,6 @@
   width: 80vw;
 }
 .heroContainer > p {
-  line-height: 2.125em;
-  text-align: left;
-  background: inherit;
-  padding: 1.2em 5em;
   width: 100vw;
 }
 .btnContainer {
@@ -84,9 +80,6 @@
 @media (min-width: 580px) {
   .heroContainer {
     margin-top: 5.2em;
-  }
-  .heroContainer > p {
-    /* max-width: 80%; */
   }
 
   .btnContainer {

@@ -30,11 +30,11 @@
 }
 body {
   display: flex;
-  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--background-primary);
   color: var(--text-primary);
+  scroll-behavior: smooth;
 }
 
 /* Global Element Styles */
@@ -53,6 +53,10 @@ p {
   color: var(--text-secondary);
   font-size: 1em;
   letter-spacing: 0.1em;
+  line-height: 2.125em;
+  text-align: left;
+  background: inherit;
+  padding: 1.2em 5em;
 }
 
 .navlink {
