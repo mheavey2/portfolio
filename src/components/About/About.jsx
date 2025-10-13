@@ -4,7 +4,7 @@ import cv from "../../assets/margaret_heavey_CV.pdf";
 
 export default function About() {
   return (
-    <div className={styles.aboutContainer}>
+    <div className={`${styles.aboutContainer} about`}>
       <h2>
         About <span>Me</span>
       </h2>
