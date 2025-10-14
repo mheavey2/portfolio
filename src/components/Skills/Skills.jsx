@@ -30,8 +30,12 @@ export default function Skills() {
         >
           <h3>Frontend</h3>
           <div className={styles.skillCards}>
-            {frontEndSkills.map((item) => {
-              return <div className={styles.skill}>{item}</div>;
+            {frontEndSkills.map((item, index) => {
+              return (
+                <div key={index} className={styles.skill}>
+                  {item}
+                </div>
+              );
             })}
           </div>
         </div>
