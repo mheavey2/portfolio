@@ -13,12 +13,6 @@
   --grad-purple: #5e46f3;
   --grad-txt-purple: #7b6dd1;
   --grad-txt-magenta: #9e73d4;
-  /* --font-desktop-lrg: 4rem;
-  --font-desktop-med: 1.25rem;
-  --font-desktop-sml: 1rem; */
-  --font--lrg: 2.5rem;
-  --font--med: 1.25rem;
-  --font--sml: 1rem;
 }
 
 *,
@@ -48,6 +42,8 @@ h2 {
   font-size: 1.875em;
   font-weight: 500;
   letter-spacing: 0.1em;
+  padding: 1.2em 1em;
+  width: 80vw;
 }
 p {
   color: var(--text-secondary);
@@ -55,8 +51,7 @@ p {
   letter-spacing: 0.1em;
   line-height: 2.125em;
   text-align: left;
-  background: inherit;
-  padding: 1.2em 5em;
+  padding: 0em 3em;
 }
 
 .navlink {
@@ -86,19 +81,6 @@ button:hover {
     var(--grad-txt-magenta)
   );
 }
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
 
 @media (min-width: 580px) {
   h1 {
