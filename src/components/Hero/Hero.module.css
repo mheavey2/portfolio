@@ -45,8 +45,7 @@
   width: 80vw;
 }
 .heroContainer > p {
-  width: 80vw;
-  background: transparent;
+  width: 100vw;
 }
 .btnContainer {
   display: flex;
@@ -79,10 +78,6 @@
 }
 
 @media (min-width: 580px) {
-  .heroContainer {
-    margin-top: 5.2em;
-  }
-
   .btnContainer {
     flex-direction: row;
   }
