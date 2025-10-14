@@ -1,0 +1,81 @@
+.projectCard {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5em;
+  row-gap: 3em;
+  column-gap: 1.5em;
+}
+.projectItem {
+  background: linear-gradient(#181746, #181746) padding-box,
+    linear-gradient(to right, var(--grad-txt-purple), var(--grad-txt-magenta))
+      border-box;
+  border: solid 2px transparent;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  gap: 2em;
+  padding: 0.3em 0.5em;
+  width: 80vw;
+  max-width: 350px;
+  height: 100%;
+}
+.projectImg {
+  height: 10rem;
+  width: 100%;
+  border-radius: 20px;
+}
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 2em;
+}
+.projectInfo > h3 {
+  margin-top: 1em;
+}
+.projectInfo > p {
+  font-size: 0.8em;
+}
+.technology {
+  background: linear-gradient(var(--grad-txt-purple), var(--grad-txt-magenta));
+  border-radius: 10px;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  font-size: 0.8em;
+}
+.technologyContainerOuter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.technologyContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.625em;
+  width: 100%;
+  padding: 2em 0.5em;
+  text-align: center;
+  margin-left: 1.8em;
+}
+.projectLinksContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projectLink > img {
+  height: 2em;
+  margin: 0em 1em;
+}
+
+@media (min-width: 768px) {
+  .projectCard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
