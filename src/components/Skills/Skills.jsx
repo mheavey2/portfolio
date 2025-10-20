@@ -32,7 +32,7 @@ export default function Skills() {
           <div className={styles.skillCards}>
             {frontEndSkills.map((item, index) => {
               return (
-                <div key={index} className={styles.skill}>
+                <div key={`frontend-${index}`} className={styles.skill}>
                   {item}
                 </div>
               );
@@ -45,8 +45,12 @@ export default function Skills() {
         >
           <h3>Backend</h3>
           <div className={styles.skillCards}>
-            {backendSkills.map((item) => {
-              return <div className={styles.skill}>{item}</div>;
+            {backendSkills.map((item, index) => {
+              return (
+                <div key={`backend-${index}`} className={styles.skill}>
+                  {item}
+                </div>
+              );
             })}
           </div>
         </div>
@@ -56,8 +60,12 @@ export default function Skills() {
         >
           <h3>Tools & Others</h3>
           <div className={styles.skillCards}>
-            {otherSkills.map((item) => {
-              return <div className={styles.skill}>{item}</div>;
+            {otherSkills.map((item, index) => {
+              return (
+                <div key={`other-${index}`} className={styles.skill}>
+                  {item}
+                </div>
+              );
             })}
           </div>
         </div>

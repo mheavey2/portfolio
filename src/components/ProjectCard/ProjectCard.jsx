@@ -19,8 +19,10 @@ export default function ProjectCard({ projects }) {
             </div>
             <div className={styles.technologyContainerOuter}>
               <div className={styles.technologyContainer}>
-                {project.technologies.map((technology) => (
-                  <div className={styles.technology}>{technology}</div>
+                {project.technologies.map((technology, index) => (
+                  <div key={index} className={styles.technology}>
+                    {technology}
+                  </div>
                 ))}
               </div>
             </div>
