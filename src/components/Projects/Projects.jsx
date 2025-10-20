@@ -38,7 +38,7 @@ export default function Projects() {
     {
       name: "Jammin App",
       tagline:
-        "A simple music app created using ReactJS that allows users to search for songs and create and save custom playlists in their Spotify account via the Spotify API using their Spotify login credentials.",
+        "A simple music app created using ReactJS that allows users to create and save custom playlists to their Spotify account.",
       technologies: ["HTML", "CSS", "JavaScript", "ReactJS"],
       demo: "https://jammin-music-app.netlify.app",
       code: "https://github.com/mheavey2/jammingApp",

@@ -1,11 +1,13 @@
 .projectCard {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: 1fr; */
   justify-content: center;
   align-items: center;
   margin-top: 5em;
   row-gap: 3em;
   column-gap: 1.5em;
+  width: 80vw;
 }
 .projectItem {
   background: linear-gradient(#181746, #181746) padding-box,
@@ -75,7 +77,15 @@
 
 @media (min-width: 768px) {
   .projectCard {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
+/* @media (min-width: 1200px) {
+  .projectCard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */

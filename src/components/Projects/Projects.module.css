@@ -26,6 +26,7 @@
   align-content: center;
   justify-content: center;
   width: 70%;
+  max-width: 300px;
   margin: 5em 0em;
   background: linear-gradient(
         var(--background-primary),
