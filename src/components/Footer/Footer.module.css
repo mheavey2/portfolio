@@ -1,0 +1,16 @@
+#footerContainer {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 3em;
+  border-bottom: 1px solid #6b7280;
+  width: 100vw;
+  margin-top: 10em;
+}
+
+#footerLeft > p,
+#footerRight > p {
+  font-size: 0.7rem;
+}
