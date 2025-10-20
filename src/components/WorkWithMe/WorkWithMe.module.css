@@ -1,0 +1,92 @@
+.workWithMeContainer {
+  position: relative;
+  height: 100%;
+  width: 100vw;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8rem;
+  text-align: center;
+  background-color: var(--background-primary);
+}
+.workWithMeCallout {
+  background: linear-gradient(#181746, #181746) padding-box,
+    linear-gradient(to right, var(--grad-txt-purple), var(--grad-txt-magenta))
+      border-box;
+  border: solid 2px transparent;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  max-width: 900px;
+}
+.workWithMeCallout h2 > span {
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    var(--grad-txt-purple),
+    var(--grad-txt-magenta)
+  );
+  background-clip: text;
+}
+
+.workWithMeCallout > p {
+  width: 100%;
+}
+
+#workWithMeBtn {
+  margin: 5em 0em;
+}
+
+.getInTouchContainer {
+  background: linear-gradient(#181746, #181746) padding-box,
+    linear-gradient(to right, var(--grad-txt-purple), var(--grad-txt-magenta))
+      border-box;
+  border: solid 2px transparent;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  max-width: 900px;
+  margin: 5em 0em;
+}
+.getInTouchContainer > h3 {
+  margin-top: 2em;
+}
+.getInTouchContainer h3 > span {
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    var(--grad-txt-purple),
+    var(--grad-txt-magenta)
+  );
+  background-clip: text;
+}
+
+.contactLogosContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 2em 0em;
+}
+.contactLogosContainer * {
+  transition: scale 300ms, filter 300ms;
+}
+.contactLogosContainer > a {
+  margin: 0em 1em;
+}
+.contactLogoImg {
+  height: 2em;
+}
+
+.contactLogosContainer:has(:hover) :not(:hover) {
+  scale: 0.8;
+  filter: blur(2px);
+}
