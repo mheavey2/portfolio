@@ -49,6 +49,7 @@
     var(--background-secondary) 50%,
     var(--background-primary) 100%
   );
+  padding: 0% 15%;
 }
 .btnContainer {
   display: flex;

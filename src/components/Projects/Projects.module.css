@@ -21,6 +21,10 @@
   );
   background-clip: text;
 }
+.projectsContainerOuter > p {
+  padding: 0% 15%;
+  margin: 5em 0em;
+}
 #projectsBtn {
   display: flex;
   align-content: center;
@@ -39,7 +43,7 @@
 }
 #projectsBtn > img {
   height: 1.3em;
-  margin-right: 1.2em;
+  margin-right: 0.5em;
 }
 
 @media (min-width: 768px) {
