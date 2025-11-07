@@ -1,7 +1,17 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Hero.module.css";
+import * as Scroll from "react-scroll";
 
 export default function Hero() {
+  const scroller = Scroll.scroller;
+  const scrollToProjects = () => {
+    scroller.scrollTo("projects", {
+      duration: 200,
+      delay: 0,
+      smooth: true,
+      offset: 0,
+    });
+  };
   return (
     <div className={styles.heroContainer}>
       <h1>Web Developer</h1>
@@ -13,8 +23,7 @@ export default function Hero() {
       </p>
       <div className={styles.btnContainer}>
         <button id={styles.workBtn} className={styles.heroBtn}>
-          //TODO: update link
-          <NavLink to="projects" className="navlink">
+          <NavLink onClick={scrollToProjects} className="navlink">
             View My Work
           </NavLink>
         </button>
