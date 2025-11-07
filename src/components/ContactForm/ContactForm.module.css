@@ -1,0 +1,127 @@
+.contactContainer {
+  position: relative;
+  max-width: 560px;
+  width: 90%;
+  margin: 175px auto 0px;
+  background: linear-gradient(#181746, #181746) padding-box,
+    linear-gradient(to right, var(--grad-txt-purple), var(--grad-txt-magenta))
+      border-box;
+  border: solid 2px transparent;
+  border-radius: 20px;
+}
+
+.form {
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0 2.5em;
+}
+.formHeader {
+  padding: 2.5em 2.5em;
+}
+#contactHeading {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-image: linear-gradient(
+      to right,
+      var(--grad-txt-purple),
+      var(--grad-txt-magenta)
+    )
+    1;
+  margin-bottom: 0.1em;
+  margin-left: 0;
+  padding: 0em 0em 0.2em;
+  display: inline-block;
+  font-size: 2.5em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  width: 100%;
+}
+#contactHeading > span {
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    var(--grad-txt-purple),
+    var(--grad-txt-magenta)
+  );
+  background-clip: text;
+}
+
+.formBody {
+  padding: 0.5rem 3.5rem 1rem;
+}
+
+form {
+  max-width: 100%;
+  display: block;
+}
+ul {
+  list-style: none;
+  width: 100%;
+}
+li {
+  clear: both;
+  display: inline-block;
+  width: 100%;
+}
+p {
+  font-size: 100%;
+  text-align: left;
+  padding: 0em;
+}
+.divider {
+  margin: 2em 0em;
+  border: 0;
+  height: 1px;
+  display: block;
+  background: linear-gradient(#181746, #181746) padding-box,
+    linear-gradient(to right, var(--grad-txt-purple), var(--grad-txt-magenta))
+      border-box;
+}
+.req {
+  color: var(--grad-txt-magenta);
+}
+label {
+  display: block;
+  color: var(--text-primary);
+  margin-bottom: 0.5em;
+  font-size: 1em;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+}
+input {
+  width: 100%;
+  margin-bottom: 0.5em;
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--text-primary);
+  color: var(--background-primary);
+  font-size: 90%;
+}
+
+textarea {
+  padding: 6px 10px;
+  width: 100%;
+  color: var(--background-primary);
+  border-radius: 5px;
+  border: 1px solid var(--text-primary);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  margin: 2em 0em;
+  text-transform: uppercase;
+}
+#requiredField {
+  font-size: 0.7em;
+  font-style: italic;
+}
+
+@media (min-width: 568px) {
+  .right {
+    float: right;
+  }
+  .left {
+    float: left;
+  }
+}
