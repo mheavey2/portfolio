@@ -13,6 +13,7 @@ export default function Hero() {
       </p>
       <div className={styles.btnContainer}>
         <button id={styles.workBtn} className={styles.heroBtn}>
+          //TODO: update link
           <NavLink to="projects" className="navlink">
             View My Work
           </NavLink>

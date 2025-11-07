@@ -5,7 +5,7 @@ import menuIcon from "../../assets/menuIconWhite.svg";
 import closeIcon from "../../assets/closeIconWhite.svg";
 import * as Scroll from "react-scroll";
 
-export default function NavbarMenu({ scroll, path, navigate }) {
+export default function NavbarMenu({ path, navigate }) {
   const [isHidden, setIsHidden] = useState(true);
 
   const toggleMenuVisiblility = () => {
