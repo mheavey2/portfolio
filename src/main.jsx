@@ -9,11 +9,6 @@ import {
 } from "react-router-dom";
 
 import App from "./components/App/App.jsx";
-import Hero from "./components/Hero/Hero.jsx";
-import About from "./components/About/About.jsx";
-import Skills from "./components/Skills/Skills.jsx";
-import Projects from "./components/Projects/Projects.jsx";
-import WorkWithMe from "./components/WorkWithMe/WorkWithMe.jsx";
 import ContactForm from "./components/ContactForm/ContactForm.jsx";
 import Home from "./components/Home/Home.jsx";
 
