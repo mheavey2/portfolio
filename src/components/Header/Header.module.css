@@ -11,12 +11,12 @@
   background: var(--background-primary);
 }
 
-#title {
+.title {
   font-size: 1.625rem;
   text-decoration: none;
   font-weight: 700;
 }
-#title > span {
+.title > span {
   color: transparent;
   background-image: linear-gradient(
     to right,

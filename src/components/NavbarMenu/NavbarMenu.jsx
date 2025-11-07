@@ -5,7 +5,7 @@ import menuIcon from "../../assets/menuIconWhite.svg";
 import closeIcon from "../../assets/closeIconWhite.svg";
 import * as Scroll from "react-scroll";
 
-export default function NavbarMenu() {
+export default function NavbarMenu({ scroll, path, navigate }) {
   const [isHidden, setIsHidden] = useState(true);
 
   const toggleMenuVisiblility = () => {
@@ -13,9 +13,8 @@ export default function NavbarMenu() {
   };
 
   const navMenuRef = useRef(null);
-
   //use react-scroller to scroll to different page sections
-  // const scroll = Scroll.animateScroll();
+
   const scroller = Scroll.scroller;
 
   // scroll to about from within homepage
@@ -28,6 +27,12 @@ export default function NavbarMenu() {
     });
   };
 
+  // scroll to about from page other than homepage
+  const goToHomeAndScrollToABout = async () => {
+    await navigate("/");
+    await scrollToAbout();
+  };
+
   // scroll to skills from within homepage
   const scrollToSkills = () => {
     scroller.scrollTo("skills", {
@@ -36,6 +41,11 @@ export default function NavbarMenu() {
       smooth: true,
       offset: 0,
     });
+  };
+  // scroll to skills from page other than homepage
+  const goToHomeAndScrollToSkills = async () => {
+    await navigate("/");
+    await scrollToSkills();
   };
 
   // scroll to projects from within homepage
@@ -47,6 +57,11 @@ export default function NavbarMenu() {
       offset: 0,
     });
   };
+  // scroll to projects from page other than homepage
+  const goToHomeAndScrollToProjects = async () => {
+    await navigate("/");
+    await scrollToProjects();
+  };
 
   // scroll to contact from within homepage
   const scrollToContact = () => {
@@ -56,6 +71,11 @@ export default function NavbarMenu() {
       smooth: true,
       offset: 0,
     });
+  };
+  // scroll to contact from page other than homepage
+  const goToHomeAndScrollToContact = async () => {
+    await navigate("/");
+    await scrollToContact();
   };
 
   useEffect(() => {
@@ -99,36 +119,82 @@ export default function NavbarMenu() {
           }`}
           role="menu"
         >
-          <NavLink
-            onClick={scrollToAbout}
-            className={`navlink ${styles.navItem}`}
-            role="menuitem"
-          >
-            About
-          </NavLink>
-
-          <NavLink
-            onClick={scrollToSkills}
-            className={`navlink ${styles.navItem}`}
-            role="menuitem"
-          >
-            Skills
-          </NavLink>
-          <NavLink
-            onClick={scrollToProjects}
-            className={`navlink ${styles.navItem}`}
-            role="menuitem"
-          >
-            Projects
-          </NavLink>
-          <NavLink
-            onClick={scrollToContact}
-            className={`navlink ${styles.navItem}`}
-          >
-            Contact
-          </NavLink>
+          {path === "/" ? (
+            <NavLink
+              onClick={scrollToAbout}
+              className={`navlink ${styles.navItem}`}
+              role="menuitem"
+            >
+              About
+            </NavLink>
+          ) : (
+            <NavLink
+              onClick={goToHomeAndScrollToABout}
+              className={`navlink ${styles.navItem}`}
+              role="menuitem"
+            >
+              About
+            </NavLink>
+          )}
+          {path === "/" ? (
+            <NavLink
+              onClick={scrollToSkills}
+              className={`navlink ${styles.navItem}`}
+              role="menuitem"
+            >
+              Skills
+            </NavLink>
+          ) : (
+            <NavLink
+              onClick={goToHomeAndScrollToSkills}
+              className={`navlink ${styles.navItem}`}
+              role="menuitem"
+            >
+              Skills
+            </NavLink>
+          )}
+          {path === "/" ? (
+            <NavLink
+              onClick={scrollToProjects}
+              className={`navlink ${styles.navItem}`}
+              role="menuitem"
+            >
+              Projects
+            </NavLink>
+          ) : (
+            <NavLink
+              onClick={goToHomeAndScrollToProjects}
+              className={`navlink ${styles.navItem}`}
+              role="menuitem"
+            >
+              Projects
+            </NavLink>
+          )}
+          {path === "/" ? (
+            <NavLink
+              onClick={scrollToContact}
+              className={`navlink ${styles.navItem} ${styles.navContact}`}
+              role="menuitem"
+            >
+              Contact
+            </NavLink>
+          ) : (
+            <NavLink
+              onClick={goToHomeAndScrollToContact}
+              className={`navlink ${styles.navItem} ${styles.navContact}`}
+              role="menuitem"
+            >
+              Contact
+            </NavLink>
+          )}
         </nav>
-        <button id={styles.contactBtn}>Get in Touch</button>
+        <NavLink
+          to="contact"
+          id={styles.contactBtn}
+          className={styles.contactBtn}
+        >
+          Get in Touch
+        </NavLink>
       </div>
     </>
   );
