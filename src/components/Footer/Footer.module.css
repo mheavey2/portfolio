@@ -2,8 +2,8 @@
   position: relative;
   bottom: 2rem;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   height: 3em;
   border-bottom: 1px solid #6b7280;
   width: 100vw;
@@ -13,4 +13,16 @@
 #footerLeft > p,
 #footerRight > p {
   font-size: 0.7rem;
+}
+
+@media (min-width: 760px) {
+  #footerContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  #footerLeft > p,
+  #footerRight > p {
+    margin: 0 4rem;
+  }
 }
