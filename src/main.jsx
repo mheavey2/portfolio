@@ -14,15 +14,14 @@ import About from "./components/About/About.jsx";
 import Skills from "./components/Skills/Skills.jsx";
 import Projects from "./components/Projects/Projects.jsx";
 import WorkWithMe from "./components/WorkWithMe/WorkWithMe.jsx";
+import ContactForm from "./components/ContactForm/ContactForm.jsx";
+import Home from "./components/Home/Home.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route index element={<Hero />} />
-      <Route path="about" element={<About />} />
-      <Route path="skills" element={<Skills />} />
-      <Route path="projects" element={<Projects />} />
-      <Route path="contact" element={<WorkWithMe />} />
+      <Route index element={<Home />} />
+      <Route path="contact" element={<ContactForm />} />
     </Route>
   )
 );
