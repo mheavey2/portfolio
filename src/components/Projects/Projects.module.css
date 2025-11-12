@@ -45,6 +45,13 @@
   height: 1.3em;
   margin-right: 0.5em;
 }
+#projectsBtn:hover {
+  background: linear-gradient(
+    to right,
+    var(--grad-txt-purple),
+    var(--grad-txt-magenta)
+  );
+}
 
 @media (min-width: 768px) {
   .projectsContainer {

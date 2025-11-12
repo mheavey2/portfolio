@@ -69,6 +69,14 @@
   align-items: center;
   justify-content: center;
 }
+.projectLinksContainer * {
+  transition: scale 300ms, filter 300ms;
+}
+
+.projectLinksContainer:has(:hover) :not(:hover) {
+  scale: 0.8;
+  filter: blur(2px);
+}
 .projectLink > img {
   height: 2em;
   margin: 0em 1em;
