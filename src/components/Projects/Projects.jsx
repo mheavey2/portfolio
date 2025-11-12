@@ -58,7 +58,11 @@ export default function Projects() {
   ];
 
   return (
-    <div className={styles.projectsContainerOuter} name="projects">
+    <div
+      className={styles.projectsContainerOuter}
+      name="projects"
+      aria-label="Projects"
+    >
       <h2>
         Featured <span>Projects</span>
       </h2>

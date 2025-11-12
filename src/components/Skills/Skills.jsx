@@ -29,7 +29,7 @@ export default function Skills() {
       </p>
       <div className={styles.skillsContainer} aria-label="Skills Categories">
         <div
-          id={`${styles.frontendContainer}  frontend-skills`}
+          id={styles.frontendContainer}
           className={styles.skillsContainerItem}
           aria-label="Frontend Skills"
         >
@@ -49,7 +49,7 @@ export default function Skills() {
           </div>
         </div>
         <div
-          id={`${styles.backendContainer} backend-skills`}
+          id={styles.backendContainer}
           className={styles.skillsContainerItem}
           aria-label="Backend Skills"
         >
@@ -69,7 +69,7 @@ export default function Skills() {
           </div>
         </div>
         <div
-          id={`${styles.otherSkillsContainer} other-skills`}
+          id={styles.otherSkillsContainer}
           className={styles.skillsContainerItem}
           aria-label="Other Skills"
         >
