@@ -192,6 +192,7 @@ export default function NavbarMenu({ path, navigate }) {
           to="contact"
           id={styles.contactBtn}
           className={styles.contactBtn}
+          aria-label="Contact Button"
         >
           Get in Touch
         </NavLink>

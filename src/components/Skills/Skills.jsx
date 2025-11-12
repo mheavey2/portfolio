@@ -15,7 +15,11 @@ export default function Skills() {
   const otherSkills = ["Git", "Github", "Figma", "Jest"];
 
   return (
-    <div className={styles.skillsContainerOuter} name="skills">
+    <div
+      className={styles.skillsContainerOuter}
+      name="skills"
+      aria-label="Skills"
+    >
       <h2>
         Skills & <span>Technologies</span>
       </h2>
@@ -23,16 +27,21 @@ export default function Skills() {
         A comprehensive toolkit for building modern web applications from
         frontend to backend.
       </p>
-      <div className={styles.skillsContainer}>
+      <div className={styles.skillsContainer} aria-label="Skills Categories">
         <div
-          id={styles.frontendContainer}
+          id={`${styles.frontendContainer}  frontend-skills`}
           className={styles.skillsContainerItem}
+          aria-label="Frontend Skills"
         >
           <h3>Frontend</h3>
           <div className={styles.skillCards}>
             {frontEndSkills.map((item, index) => {
               return (
-                <div key={`frontend-${index}`} className={styles.skill}>
+                <div
+                  key={`frontend-${index}`}
+                  className={styles.skill}
+                  aria-label={`${item}`}
+                >
                   {item}
                 </div>
               );
@@ -40,14 +49,19 @@ export default function Skills() {
           </div>
         </div>
         <div
-          id={styles.backendContainer}
+          id={`${styles.backendContainer} backend-skills`}
           className={styles.skillsContainerItem}
+          aria-label="Backend Skills"
         >
           <h3>Backend</h3>
           <div className={styles.skillCards}>
             {backendSkills.map((item, index) => {
               return (
-                <div key={`backend-${index}`} className={styles.skill}>
+                <div
+                  key={`backend-${index}`}
+                  className={styles.skill}
+                  aria-label={`${item}`}
+                >
                   {item}
                 </div>
               );
@@ -55,14 +69,19 @@ export default function Skills() {
           </div>
         </div>
         <div
-          id={styles.otherSkillsContainer}
+          id={`${styles.otherSkillsContainer} other-skills`}
           className={styles.skillsContainerItem}
+          aria-label="Other Skills"
         >
           <h3>Tools & Others</h3>
-          <div className={styles.skillCards}>
+          <div className={styles.skillCards} aria-label="Tools">
             {otherSkills.map((item, index) => {
               return (
-                <div key={`other-${index}`} className={styles.skill}>
+                <div
+                  key={`other-${index}`}
+                  className={styles.skill}
+                  aria-label={`${item}`}
+                >
                   {item}
                 </div>
               );

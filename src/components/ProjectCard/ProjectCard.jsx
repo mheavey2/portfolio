@@ -4,10 +4,10 @@ import githubLogo from "../../assets/githubLogoWhite.svg";
 
 export default function ProjectCard({ projects }) {
   return (
-    <div className={styles.projectCard}>
+    <ul className={styles.projectCard} aria-label="Project Showcase">
       {projects.map((project, index) => {
         return (
-          <div key={index} className={styles.projectItem}>
+          <li key={index} className={styles.projectItem}>
             <img
               src={project.img}
               alt={project.alt}
@@ -37,9 +37,9 @@ export default function ProjectCard({ projects }) {
                 />
               </a>
             </div>
-          </div>
+          </li>
         );
       })}
-    </div>
+    </ul>
   );
 }

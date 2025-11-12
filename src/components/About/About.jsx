@@ -4,8 +4,13 @@ import cv from "../../assets/margaret_heavey_CV.pdf";
 
 export default function About() {
   return (
-    <div className={styles.aboutContainer} name="about">
-      <h2>
+    <div
+      className={styles.aboutContainer}
+      name="about"
+      role="region"
+      aria-labelledby="about-heading"
+    >
+      <h2 id="about-heading">
         About <span>Me</span>
       </h2>
       <p>
@@ -14,9 +19,9 @@ export default function About() {
         using modern technologies like React, Node.js, and TypeScript.
       </p>
       <div className={styles.btnContainer}>
-        <a href={cv} download="margaret_heavey_CV">
+        <a href={cv} download="margaret_heavey_CV" aria-label="Download CV">
           <button id={styles.cvBtn}>
-            Download CV <img src={downloadIcon} alt="download" />
+            Download CV <img src={downloadIcon} alt="download icon" />
           </button>
         </a>
       </div>

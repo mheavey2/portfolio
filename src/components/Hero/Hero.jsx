@@ -23,12 +23,20 @@ export default function Hero() {
       </p>
       <div className={styles.btnContainer}>
         <button id={styles.workBtn} className={styles.heroBtn}>
-          <NavLink onClick={scrollToProjects} className="navlink">
+          <NavLink
+            onClick={scrollToProjects}
+            className="navlink"
+            aria-label="View Projects"
+          >
             View My Work
           </NavLink>
         </button>
         <button id={styles.collabBtn} className={styles.heroBtn}>
-          <NavLink to="contact" className="navlink">
+          <NavLink
+            to="contact"
+            className="navlink"
+            aria-label="Go to Contact Page"
+          >
             Lets Collaborate
           </NavLink>
         </button>

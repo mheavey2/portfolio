@@ -5,13 +5,21 @@ import { NavLink } from "react-router-dom";
 export default function Header({ path, scrollToHome, goToHome, navigate }) {
   return (
     <header id={styles.header}>
-      <div className={styles.nameContainer}>
+      <div className={styles.nameContainer} aria-label="Personal Branding">
         {path === "/" ? (
-          <NavLink onClick={scrollToHome} className={`navlink ${styles.title}`}>
+          <NavLink
+            onClick={scrollToHome}
+            className={`navlink ${styles.title}`}
+            aria-label="Navigate to Home"
+          >
             <span>Margaret</span>Heavey
           </NavLink>
         ) : (
-          <NavLink onClick={goToHome} className={`navlink ${styles.title}`}>
+          <NavLink
+            onClick={goToHome}
+            className={`navlink ${styles.title}`}
+            aria-label="Navigate to Home Page"
+          >
             <span>Margaret</span>Heavey
           </NavLink>
         )}
@@ -21,6 +29,7 @@ export default function Header({ path, scrollToHome, goToHome, navigate }) {
         navigate={navigate}
         goToHome={goToHome}
         scrollToHome={scrollToHome}
+        aria-label="Main Navigation Menu"
       />
     </header>
   );

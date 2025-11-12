@@ -4,7 +4,7 @@ import jamminApp from "../../assets/jamminAppLoginScreen.png";
 import recipeApp from "../../assets/recipeAppLandingPage.png";
 import ticTacToe from "../../assets/ticTacToe.png";
 import githubLogo from "../../assets/githubLogoWhite.svg";
-// import fitFusion from "../../assets/"
+import fitFusion from "../../assets/fitFusionHome.png";
 
 export default function Projects() {
   const projects = [
@@ -13,9 +13,9 @@ export default function Projects() {
       tagline:
         "A responsive website for a gym business showcasing its services, team members, membership packages and class schedules.",
       technologies: ["HTML", "CSS", "JavaScript", "ReactJS", "React Router"],
-      demo: "",
+      demo: "https://fitfusionstudios.netlify.app/",
       code: "https://github.com/mheavey2/fit-fusion-gym",
-      img: "",
+      img: fitFusion,
       alt: "fitFusion Studio Gym landing page",
     },
     {
