@@ -41,7 +41,7 @@ export default function ContactForm() {
   return (
     <div className={styles.contactContainer} aria-labelledby="contact-heading">
       <div className={`${styles.form}, ${styles.formHeader}`}>
-        <h3 id={`${styles.contactHeading} contact-heading`}>
+        <h3 id={styles.contactHeading}>
           Contact <span>Us</span> &nbsp;
         </h3>
       </div>
