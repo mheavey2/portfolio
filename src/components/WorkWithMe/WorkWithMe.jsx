@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styles from "./WorkWithMe.module.css";
 import githubLogo from "../../assets/githubLogoWhite.svg";
 import emailLogo from "../../assets/emailLogoWhite.svg";
@@ -18,9 +19,13 @@ export default function WorkWithMe() {
           I create tailored strategies that align with your unique business
           goals and technical requirements
         </p>
-        <button id={` work-with-me-btn ${styles.workWithMeBtn}`}>
+        <NavLink
+          to="contact"
+          id={styles.workWithMeBtn}
+          aria-label="Contact Button"
+        >
           Let's Discuss
-        </button>
+        </NavLink>
       </div>
       <div className={styles.getInTouchContainer}>
         <h3>

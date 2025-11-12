@@ -36,12 +36,34 @@
 
 .workWithMeCallout > p {
   width: 100%;
+  padding: 0em 4em;
 }
 
 #workWithMeBtn {
+  border-radius: 20px;
+  border: 1px solid transparent;
+  padding: 1em 0.5em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  background: linear-gradient(to right, var(--grad-blue), var(--grad-purple));
+  color: var(--text-primary);
+  letter-spacing: 0.1em;
+  width: 200px;
+  transition: transform;
+  text-decoration: none;
+  text-align: center;
   margin: 5em 0em;
 }
-
+#workWithMeBtn:hover {
+  background: linear-gradient(
+    to right,
+    var(--grad-txt-purple),
+    var(--grad-txt-magenta)
+  );
+}
 .getInTouchContainer {
   background: linear-gradient(#181746, #181746) padding-box,
     linear-gradient(to right, var(--grad-txt-purple), var(--grad-txt-magenta))
