@@ -1,7 +1,6 @@
 import styles from "./ContactForm.module.css";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
