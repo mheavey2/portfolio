@@ -50,8 +50,10 @@ p {
   font-size: 1em;
   letter-spacing: 0.1em;
   line-height: 2.125em;
-  text-align: left;
   padding: 0em 3em;
+}
+.text {
+  text-align: center;
 }
 
 .navlink {

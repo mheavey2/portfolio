@@ -16,7 +16,7 @@ export default function Hero() {
     <div className={styles.heroContainer}>
       <h1>Web Developer</h1>
       <h2>Crafting Digital Experiences</h2>
-      <p>
+      <p className="text">
         I create modern, responsive web applications using React, Javascript,
         TypeScript, and Node.js. Passionate about clean code, user experience,
         and solving complex problems.

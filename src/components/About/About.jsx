@@ -13,7 +13,7 @@ export default function About() {
       <h2 id="about-heading">
         About <span>Me</span>
       </h2>
-      <p>
+      <p className="text">
         I'm a passionate full-stack developer, creating digital solutions that
         make a difference. I specialise in building scalable web applications
         using modern technologies like React, Node.js, and TypeScript.
