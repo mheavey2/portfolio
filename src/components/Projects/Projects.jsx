@@ -5,6 +5,7 @@ import recipeApp from "../../assets/recipeAppLandingPage.png";
 import ticTacToe from "../../assets/ticTacToe.png";
 import githubLogo from "../../assets/githubLogoWhite.svg";
 import fitFusion from "../../assets/fitFusionHome.png";
+import portfolio from "../../assets/portfolioHomepage.png";
 
 export default function Projects() {
   const projects = [
@@ -46,6 +47,16 @@ export default function Projects() {
       alt: "Jammin App Login Screen",
     },
     {
+      name: "Portfolio V1.0",
+      tagline:
+        "A previous version of my we dev portfolio site created using CSS, HTML and Javascript,.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      demo: "https://mheavey2.github.io/margaretheavey",
+      code: "https://github.com/mheavey2/margaretheavey",
+      img: portfolio,
+      alt: "portfolio site landing page",
+    },
+    {
       name: "Tic Tac Toe",
       tagline:
         "A simple two player Tic-Tac-Toe (X's and O's) game created using CSS, HTML, Javascript and ReactJS.",
@@ -66,16 +77,18 @@ export default function Projects() {
       <h2>
         Featured <span>Projects</span>
       </h2>
-      <p>
+      <p className="text">
         A selection of projects that showcase my skills in full-stack
         development, UI/UX design, and problem-solving skills.
       </p>
 
       <ProjectCard projects={projects} />
-      <button id={styles.projectsBtn}>
-        <img src={githubLogo} alt="white github logo" />
-        <span>View All Projects</span>
-      </button>
+      <a href="https://github.com/mheavey2" id={styles.githubLink}>
+        <button id={styles.projectsBtn}>
+          <img src={githubLogo} alt="white github logo" />
+          <span>View All Projects</span>
+        </button>
+      </a>
     </div>
   );
 }
