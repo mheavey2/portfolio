@@ -25,11 +25,14 @@
   padding: 0% 15%;
   margin: 5em 0em;
 }
+#githubLink {
+  text-decoration: none;
+}
 #projectsBtn {
   display: flex;
   align-content: center;
   justify-content: center;
-  width: 70%;
+  width: 100%;
   max-width: 300px;
   margin: 5em 0em;
   background: linear-gradient(
@@ -40,6 +43,7 @@
     linear-gradient(to right, var(--grad-txt-purple), var(--grad-txt-magenta))
       border-box;
   border: solid 2px transparent;
+  text-decoration: none;
 }
 #projectsBtn > img {
   height: 1.3em;
