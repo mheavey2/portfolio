@@ -74,12 +74,11 @@
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background 0.25s ease;
   background: linear-gradient(to right, var(--grad-blue), var(--grad-purple));
   color: var(--text-primary);
   letter-spacing: 0.1em;
   width: 200px;
-  transition: transform;
   text-decoration: none;
   text-align: center;
 }
