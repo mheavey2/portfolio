@@ -15,7 +15,7 @@ export default function WorkWithMe() {
         <h2>
           Work With <span>Me</span>
         </h2>
-        <p>
+        <p className="text">
           I create tailored strategies that align with your unique business
           goals and technical requirements
         </p>

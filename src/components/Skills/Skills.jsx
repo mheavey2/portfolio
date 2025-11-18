@@ -23,7 +23,7 @@ export default function Skills() {
       <h2>
         Skills & <span>Technologies</span>
       </h2>
-      <p>
+      <p className="text">
         A comprehensive toolkit for building modern web applications from
         frontend to backend.
       </p>
