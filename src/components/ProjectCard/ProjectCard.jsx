@@ -15,7 +15,7 @@ export default function ProjectCard({ projects }) {
             />
             <div className={styles.projectInfo}>
               <h3>{project.name}</h3>
-              <p>{project.tagline}</p>
+              <p className="text">{project.tagline}</p>
             </div>
             <div className={styles.technologyContainerOuter}>
               <div className={styles.technologyContainer}>
@@ -27,9 +27,11 @@ export default function ProjectCard({ projects }) {
               </div>
             </div>
             <div className={styles.projectLinksContainer}>
-              <a href={project.demo} className={styles.projectLink}>
-                <img src={externalLink} alt="open demo link in new window" />
-              </a>
+              {project.demo && (
+                <a href={project.demo} className={styles.projectLink}>
+                  <img src={externalLink} alt="open demo link in new window" />
+                </a>
+              )}
               <a href={project.code} className={styles.projectLink}>
                 <img
                   src={githubLogo}
