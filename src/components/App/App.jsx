@@ -2,6 +2,8 @@ import styles from "./App.module.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { useAnalytics } from "@keiko-app/react-google-analytics";
 
 import { useLayoutEffect } from "react";
 
@@ -9,6 +11,12 @@ function App() {
   const navigate = useNavigate();
   const location = useLocation();
   const path = location.pathname;
+  const { tracker } = useAnalytics();
+
+  //track page views
+  useEffect(() => {
+    tracker.trackPageView({});
+  }, [location, tracker]);
 
   // scroll to top of page after a page transition
   useLayoutEffect(() => {

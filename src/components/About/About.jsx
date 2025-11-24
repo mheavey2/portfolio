@@ -1,8 +1,15 @@
 import styles from "./About.module.css";
 import downloadIcon from "../../assets/downloadIconWhite.svg";
 import cv from "../../assets/margaret_heavey_CV.pdf";
+import { useAnalytics } from "@keiko-app/react-google-analytics";
 
 export default function About() {
+  const { tracker } = useAnalytics();
+
+  const handleClick = () => {
+    tracker.trackEvent("button_click", { button_name: "Download CV" });
+  };
+
   return (
     <div
       className={styles.aboutContainer}
@@ -20,7 +27,7 @@ export default function About() {
       </p>
       <div className={styles.btnContainer}>
         <a href={cv} download="margaret_heavey_CV" aria-label="Download CV">
-          <button id={styles.cvBtn}>
+          <button id={styles.cvBtn} onClick={handleClick}>
             Download CV <img src={downloadIcon} alt="download icon" />
           </button>
         </a>

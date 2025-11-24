@@ -11,6 +11,11 @@ import {
 import App from "./components/App/App.jsx";
 import ContactForm from "./components/ContactForm/ContactForm.jsx";
 import Home from "./components/Home/Home.jsx";
+import { AnalyticsProvider } from "@keiko-app/react-google-analytics";
+
+const analyticsConfig = {
+  measurementId: import.meta.env.VITE_APP_GA4_MEASUREMENT_ID,
+};
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +28,8 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <AnalyticsProvider config={analyticsConfig}>
+      <RouterProvider router={router}></RouterProvider>
+    </AnalyticsProvider>
   </StrictMode>
 );

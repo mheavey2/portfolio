@@ -1,8 +1,10 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Hero.module.css";
 import * as Scroll from "react-scroll";
+import { useAnalytics } from "@keiko-app/react-google-analytics";
 
 export default function Hero() {
+  const { tracker } = useAnalytics();
   const scroller = Scroll.scroller;
   const scrollToProjects = () => {
     scroller.scrollTo("projects", {
@@ -11,7 +13,13 @@ export default function Hero() {
       smooth: true,
       offset: 0,
     });
+    tracker.trackEvent("button_click", { button_name: "View My Work" });
   };
+
+  const handleClick = () => {
+    tracker.trackEvent("button_click", { button_name: "Lets Collaborate" });
+  };
+
   return (
     <div className={styles.heroContainer}>
       <h1>Web Developer</h1>
@@ -31,7 +39,11 @@ export default function Hero() {
             View My Work
           </NavLink>
         </button>
-        <button id={styles.collabBtn} className={styles.heroBtn}>
+        <button
+          id={styles.collabBtn}
+          className={styles.heroBtn}
+          onClick={handleClick}
+        >
           <NavLink
             to="contact"
             className="navlink"

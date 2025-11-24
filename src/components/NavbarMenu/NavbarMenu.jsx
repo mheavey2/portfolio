@@ -4,8 +4,10 @@ import { useState, useRef, useEffect } from "react";
 import menuIcon from "../../assets/menuIconWhite.svg";
 import closeIcon from "../../assets/closeIconWhite.svg";
 import * as Scroll from "react-scroll";
+import { useAnalytics } from "@keiko-app/react-google-analytics";
 
 export default function NavbarMenu({ path, navigate }) {
+  const { tracker } = useAnalytics();
   const [isHidden, setIsHidden] = useState(true);
 
   const toggleMenuVisiblility = () => {
@@ -25,12 +27,14 @@ export default function NavbarMenu({ path, navigate }) {
       smooth: true,
       offset: 0,
     });
+    tracker.trackEvent("button_click", { button_name: "About" });
   };
 
   // scroll to about from page other than homepage
   const goToHomeAndScrollToABout = async () => {
     await navigate("/");
     await scrollToAbout();
+    tracker.trackEvent("button_click", { button_name: "Home_and_About" });
   };
 
   // scroll to skills from within homepage
@@ -41,11 +45,13 @@ export default function NavbarMenu({ path, navigate }) {
       smooth: true,
       offset: 0,
     });
+    tracker.trackEvent("button_click", { button_name: "Skills" });
   };
   // scroll to skills from page other than homepage
   const goToHomeAndScrollToSkills = async () => {
     await navigate("/");
     await scrollToSkills();
+    tracker.trackEvent("button_click", { button_name: "Home_and_Skills" });
   };
 
   // scroll to projects from within homepage
@@ -56,11 +62,13 @@ export default function NavbarMenu({ path, navigate }) {
       smooth: true,
       offset: 0,
     });
+    tracker.trackEvent("button_click", { button_name: "Projects" });
   };
   // scroll to projects from page other than homepage
   const goToHomeAndScrollToProjects = async () => {
     await navigate("/");
     await scrollToProjects();
+    tracker.trackEvent("button_click", { button_name: "Home_and_Projects" });
   };
 
   // scroll to contact from within homepage
@@ -71,11 +79,13 @@ export default function NavbarMenu({ path, navigate }) {
       smooth: true,
       offset: 0,
     });
+    tracker.trackEvent("button_click", { button_name: "WorkWithMe" });
   };
   // scroll to contact from page other than homepage
   const goToHomeAndScrollToContact = async () => {
     await navigate("/");
     await scrollToContact();
+    tracker.trackEvent("button_click", { button_name: "Home_and_WorkWithMe" });
   };
 
   useEffect(() => {

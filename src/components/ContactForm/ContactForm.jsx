@@ -1,10 +1,12 @@
 import styles from "./ContactForm.module.css";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useAnalytics } from "@keiko-app/react-google-analytics";
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stateMessage, setStateMessage] = useState("Submit");
+  const { tracker } = useAnalytics();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,6 +37,7 @@ export default function ContactForm() {
       );
     //clear form after sending email
     e.target.reset();
+    tracker.trackEvent("form_submission", { form_id: "contact_form" });
   };
 
   return (

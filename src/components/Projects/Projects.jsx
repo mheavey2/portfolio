@@ -5,8 +5,15 @@ import recipeApp from "../../assets/recipeAppLandingPage.png";
 import githubLogo from "../../assets/githubLogoWhite.svg";
 import fitFusion from "../../assets/fitFusionHome.png";
 import portfolio from "../../assets/portfolioHomepage.png";
+import { useAnalytics } from "@keiko-app/react-google-analytics";
 
 export default function Projects() {
+  const { tracker } = useAnalytics();
+
+  const handleClick = () => {
+    tracker.trackEvent("button_click", { button_name: "View All Projects" });
+  };
+
   const projects = [
     {
       name: "FitFusion Studio Gym",
@@ -72,7 +79,11 @@ export default function Projects() {
       </p>
 
       <ProjectCard projects={projects} />
-      <a href="https://github.com/mheavey2" id={styles.githubLink}>
+      <a
+        href="https://github.com/mheavey2"
+        id={styles.githubLink}
+        onClick={handleClick}
+      >
         <button id={styles.projectsBtn}>
           <img src={githubLogo} alt="white github logo" />
           <span>View All Projects</span>
