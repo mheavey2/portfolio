@@ -2,7 +2,6 @@ import ProjectCard from "../ProjectCard/ProjectCard";
 import styles from "./Projects.module.css";
 import jamminApp from "../../assets/jamminAppLoginScreen.png";
 import recipeApp from "../../assets/recipeAppLandingPage.png";
-import ticTacToe from "../../assets/ticTacToe.png";
 import githubLogo from "../../assets/githubLogoWhite.svg";
 import fitFusion from "../../assets/fitFusionHome.png";
 import portfolio from "../../assets/portfolioHomepage.png";
@@ -55,16 +54,6 @@ export default function Projects() {
       code: "https://github.com/mheavey2/margaretheavey",
       img: portfolio,
       alt: "portfolio site landing page",
-    },
-    {
-      name: "Tic Tac Toe",
-      tagline:
-        "A simple two player Tic-Tac-Toe (X's and O's) game created using CSS, HTML, Javascript and ReactJS.",
-      technologies: ["HTML", "CSS", "JavaScript", "ReactJS"],
-      demo: "https://tic-tac-toe-x-and-o.netlify.app",
-      code: "https://github.com/mheavey2/ticTacToe",
-      img: ticTacToe,
-      alt: "ticTacToe game landing page",
     },
   ];
 
